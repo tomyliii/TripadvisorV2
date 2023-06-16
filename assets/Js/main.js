@@ -190,7 +190,7 @@ $.addEventListener("DOMContentLoaded", () => {
         $.querySelector("#email").style.borderColor = "rgb(9, 214, 43)";
 
         const response = await axios.post(
-          "site--tripadvicor-back--tzmxcvqjqbzq.code.run/form",
+          "https://site--tripadvicor-back--tzmxcvqjqbzq.code.run/form",
           {
             message,
             email,
