@@ -34,7 +34,91 @@ h3 {
   font-weight: bold;
   margin-bottom: 20px;
 }
+.connectForm {
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 4;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  > form {
+    margin: 0 auto;
+    position: relative;
+    #closeConnectionForm {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      border: none;
+      background-color: #fff;
+      font-size: 25px;
+      color: grey;
+      &:hover {
+        color: black;
+        cursor: pointer;
+      }
+    }
+    > h2 {
+      text-align: center;
+    }
 
+    display: flex;
+    flex-direction: column;
+    padding: 70px 30px;
+    gap: 20px;
+
+    width: 490px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    > input,
+    > textarea {
+      width: 70%;
+      margin: 0 auto;
+      border: black solid 2px;
+      padding: 10px;
+      font-family: TS-reg, sans-serif;
+      font-weight: bold;
+    }
+    > input {
+      height: 50px;
+    }
+    > textarea {
+      height: 120px;
+    }
+    > textarea + p {
+      font-size: 14px;
+      text-align: center;
+      color: grey;
+    }
+    #sendForm {
+      width: fit-content;
+      margin: 0 auto;
+      cursor: pointer;
+      padding: 10px 15px;
+      color: white;
+      background-color: rgb(58, 149, 58);
+      border: none;
+      font-family: TS-reg, sans-serif;
+      font-weight: bold;
+      border-radius: 5px;
+      &:hover {
+        background-color: rgb(155, 208, 155);
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+.display {
+  display: flex;
+}
+.bodyModalOpen {
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px;
+}
 //PUB-----------------------------------------------------------
 .pub {
   height: 170px;

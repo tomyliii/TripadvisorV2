@@ -9,10 +9,12 @@
       src="https://kit.fontawesome.com/daa147b967.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
     <meta
       name="keywords"
       content="voyages,visites,activités,tourisme,guide,sorties"
     />
+    <script src="./assets/Js/main.js"></script>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
@@ -20,12 +22,42 @@
     <title>Tourisme à New York</title>
   </head>
   <body>
+    <div id="connectionForm" class="connectForm hidden">
+      <form id="form">
+        <button id="closeConnectionForm">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2>Formulaire de contact</h2>
+
+        <input
+          type="text"
+          name="firstname"
+          id="firstname"
+          placeholder="Prénom *"
+        /><input
+          type="text"
+          name="nom"
+          id="lastname"
+          placeholder="Nom *"
+        /><input type="email" id="email" placeholder="Email *" /><textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Ecrivez votre message...*"
+        ></textarea>
+        <p>Les champs avec une (*) sont obligatoires.</p>
+        <button type="button" id="sendForm">Envoyer le formulaire</button>
+        <p id="messageForm" class="hidden"></p>
+      </form>
+    </div>
     <div class="pub"><img src="./assets/img/PubFuzeTea.jpg" alt="" /></div>
+
     <header class="container">
       <div class="hiddenAtStart">
         <i class="fa-solid fa-bars hiddenAtStart"></i>
         <ul>
-          <li><button>Connectez-vous</button></li>
+          <li><button id="loginLittelScreen">Connectez-vous</button></li>
           <li><button>Ecrivez un avis</button></li>
           <li><button>Publier des photos</button></li>
           <li><button>Alertes</button></li>
@@ -52,7 +84,8 @@
           alt="logo Tripadvisor"
         />
       </div>
-      <input type="search" name="search" id="search" class="hidden768" />
+
+      <input type="search" name="search" id="searchHeader" class="hidden768" />
       <nav>
         <a href="#" class="hidden768"
           ><i class="fa-solid fa-pen"></i><span>Avis</span></a
@@ -60,7 +93,7 @@
           ><i class="fa-solid fa-heart"></i><span>Voyages</span></a
         ><a href="#" class="hidden768"
           ><i class="fa-solid fa-bell"></i><span>Alerte</span></a
-        ><button class="hidden768">Connectez-vous</button
+        ><button class="hidden768" id="connection">Connectez-vous</button
         ><button class="hiddenAtStartButton">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
