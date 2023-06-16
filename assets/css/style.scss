@@ -613,6 +613,9 @@ article {
 }
 footer {
   background-color: #faf1ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   p {
     padding: 80px;
     text-align: center;
